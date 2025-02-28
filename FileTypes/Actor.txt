@@ -1,0 +1,45 @@
+<HEADER>
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "<CLASSNAME>.generated.h"
+
+UCLASS(BlueprintType, Blueprintable)
+class <PROJECTNAME>_API A<CLASSNAME> : public AActor
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	A<CLASSNAME>();
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+private:
+
+};
+
+<CPP>
+#include "<HEADERFILEPATH>"
+
+A<CLASSNAME>::A<CLASSNAME>()
+{
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+}
+
+void A<CLASSNAME>::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+
+void A<CLASSNAME>::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}

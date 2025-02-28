@@ -1,0 +1,45 @@
+<HEADER>
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Components/SceneComponent.h"
+#include "<CLASSNAME>.generated.h"
+
+UCLASS(BlueprintType, Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+class <PROJECTNAME>_API U<CLASSNAME> : public USceneComponent
+{
+	GENERATED_BODY()
+	
+public:	
+	// Sets default values for this actor's properties
+	U<CLASSNAME>();
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+private:
+
+};
+
+<CPP>
+#include "<HEADERFILEPATH>"
+
+U<CLASSNAME>::U<CLASSNAME>()
+{
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryComponentTick.bCanEverTick = true;
+
+}
+
+void U<CLASSNAME>::BeginPlay()
+{
+	Super::BeginPlay();
+
+}
+
+void U<CLASSNAME>::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+}

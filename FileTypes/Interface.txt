@@ -1,0 +1,26 @@
+<HEADER>
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/Interface.h"
+#include "<CLASSNAME>.generated.h"
+
+UCLASS(MinimalAPI, BlueprintType, Blueprintable)
+class <PROJECTNAME>_API U<CLASSNAME> : public UInterface
+{
+	GENERATED_BODY()
+};
+
+class <PROJECTNAME>_API U<CLASSNAME> : public U<CLASSNAME>
+{
+	GENERATED_BODY()
+
+public:
+
+private:
+
+};
+
+
+<CPP>
+#include "<HEADERFILEPATH>"

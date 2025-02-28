@@ -1,0 +1,31 @@
+<HEADER>
+#pragma once
+
+#include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "../Interfaces/Instruction.h"
+#include "<CLASSNAME>.generated.h"
+
+/**
+ * 
+ */
+UCLASS(BlueprintType, Blueprintable)
+class LUNABOTANICA_API U<CLASSNAME> 
+	: 
+	public UObject,
+	public IInstruction
+{
+	GENERATED_BODY()
+public:
+	void Execute_Implementation(const FInstructionContext& Context) override;
+
+};
+
+<CPP>
+#include "<HEADERFILEPATH>"
+#include "Quest/QuestManager.h"
+
+void U<CLASSNAME>::Execute_Implementation(const FInstructionContext& Context)
+{
+	
+}
